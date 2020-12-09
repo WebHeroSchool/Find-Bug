@@ -13,14 +13,18 @@ body {
 }
 
 .main {
-    font-family: 'roboto-super' sans-serif;
+    position: relative;
     background-image: url('../img/background.png');
     background-size: auto;
-    color: #fff;
+    min-height: 1024px;
+    height: 100vh;
 }
 
 .header {
+    font-family: 'roboto-super' sans-serif;
+    color: #fff;
     margin-left: 143px;
+    padding-top: 123px;
 }
 
 .header__title {
@@ -67,33 +71,36 @@ body {
     align-items: center;
     justify-content: center;
     width: 352px;
-    height: 92px;
+    height: 95px;
     font-weight: 700;
     font-size: 32px;
     line-height: 37px;
     background-color: #D62B2E;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 7px;
     border: none;
     transition: 0.5s;
     cursor: pointer;
 }
 
-.button:hover {
+.button_start:hover {
     font-size: 33px;
-    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .decoration {
-    margin-left: 486px;
+    display: grid;
+    grid-auto-rows: 100px;
+    grid-auto-columns: 100px;
+    margin-left: 401px;
 }
 
 .card1 {
-    width: 218 px;
-    height: 341 px;
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
 }
 
 .card2 {
-    width: 218 px;
-    height: 341 px;
+    grid-row: 3 / 4;
+    grid-column: 2 / 4;
 }
