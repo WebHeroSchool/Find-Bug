@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/fonts.css">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <title>Find Bug</title>
 </head>
+
 <body>
   <main class="main">
     <header class="header">
@@ -16,18 +19,21 @@
       </p>
     </header>
     <section class="section">
-      <nav class="nav">
-        <a id="3" class="nav__link" href="">Простой</a>
-        <a id="6" class="nav__link" href="">Средний</a>
-        <a id="9" class="nav__link" href="">Сложный</a>
-        <div class="button_start" href="">Начать игру</div>
+      <nav id="navMenu" class="nav">
+        <div id="threeCards"><a class="nav__link">Простой</a></div>
+        <div id="sixCards"><a class="nav__link">Средний</a></div>
+        <div id="nineCards"><a class="nav__link">Сложный</a></div>
+        <div id="startBtn" class="button_start">Начать игру</div>
+        </div>
       </nav>
       <div class="decoration">
         <img class="card1" src="./img/card1.svg" alt="cardOne">
         <img class="card2" src="./img/card2.svg" alt="cardTwo">
       </div>
+      <div class="gameMode offMode" id='gameMode'></div>
     </section>
   </main>
-  <script></script>
+  <script src='./script.js'></script>
 </body>
+
 </html>

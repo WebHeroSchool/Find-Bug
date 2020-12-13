@@ -11,6 +11,10 @@ body {
     position: relative;
 }
 
+.offMode {
+    display: none;
+}
+
 .main {
     position: relative;
     background-image: url('../img/background.png');
@@ -61,6 +65,7 @@ body {
     line-height: 59px;
     margin-bottom: 24px;
     margin-left: 42px;
+    cursor: pointer;
 }
 
 .nav__link:hover::before {
@@ -69,6 +74,7 @@ body {
     width: 18px;
     height: 18px;
     left: 143px;
+    opacity: .8;
 }
 
 .nav__link:nth-last-child(2) {
@@ -112,6 +118,18 @@ body {
 .card2 {
     grid-row: 3 / 4;
     grid-column: 2 / 4;
+}
+
+.gameMode {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* test js */
+.selected {
+    display: block;
+    
 }
 
 @media (max-width: 1024px) {
