@@ -63,11 +63,6 @@ body {
     margin-left: 42px;
 }
 
-
-
-.nav__link:nth-last-child(2) {
-    margin-bottom: 112px;
-}
 .nav__link:hover::before {
     position: absolute;
     content: url('../img/checkmark.svg');
@@ -75,6 +70,11 @@ body {
     height: 18px;
     left: 143px;
 }
+
+.nav__link:nth-last-child(2) {
+    margin-bottom: 112px;
+}
+
 .button_start {
     display: flex;
     align-items: center;
@@ -112,4 +112,71 @@ body {
 .card2 {
     grid-row: 3 / 4;
     grid-column: 2 / 4;
+}
+
+@media (max-width: 1024px) {
+    .main {
+        width: auto;
+    }
+    .header {
+        margin-left: 43px;
+    }
+    .section {
+        margin-left: 43px;
+    }
+    .nav__link:hover::before {
+        left: 43px;
+    }
+    .decoration {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .main {
+        margin: auto;
+        width: auto;
+    }
+    .header {
+        width: 600px;
+        padding-top: 25px;
+        margin-left: 25px;
+    }
+    .header__title {
+        height: 58px;
+        font-size: 40px;
+    }
+    .header__text {
+        width: 600px;
+        height: 46px;
+    }
+    .section {
+        flex-direction: column;
+        margin-left: 25px;
+    }
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    .nav__link {
+        margin-left: 0;
+    }
+    .nav__link:nth-last-child(2) {
+        margin-bottom: 70px;
+    }
+    .nav__link:hover::before {
+        left: 143px;
+    }
+    .button_start {
+        font-size: 28px;
+        line-height: 30px;
+        width: 230px;
+        height: 50px;
+    }
+    .decoration {
+        margin-left: 0;
+        grid-auto-rows: 25px;
+    }
 }
