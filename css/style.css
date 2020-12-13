@@ -63,6 +63,11 @@ body {
     margin-left: 42px;
 }
 
+
+
+.nav__link:nth-last-child(2) {
+    margin-bottom: 112px;
+}
 .nav__link:hover::before {
     position: absolute;
     content: url('../img/checkmark.svg');
@@ -70,11 +75,6 @@ body {
     height: 18px;
     left: 143px;
 }
-
-.nav__link:nth-last-child(2) {
-    margin-bottom: 112px;
-}
-
 .button_start {
     display: flex;
     align-items: center;
