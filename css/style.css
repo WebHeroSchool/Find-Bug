@@ -126,10 +126,11 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 /* test js */
+
 .selected {
     display: block;
-    
 }
 
 @media (max-width: 1024px) {
