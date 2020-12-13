@@ -5,7 +5,6 @@ body, h1, p {
 
 a {
     text-decoration: none;
-    color: #fff;
 }
 
 body {
@@ -56,10 +55,20 @@ body {
 }
 
 .nav__link {
+    color: #fff;
     font-weight: 700;
     font-size: 50px;
     line-height: 59px;
     margin-bottom: 24px;
+    margin-left: 42px;
+}
+
+.nav__link:hover::before {
+    position: absolute;
+    content: url('../img/checkmark.svg');
+    width: 18px;
+    height: 18px;
+    left: 143px;
 }
 
 .nav__link:nth-last-child(2) {
