@@ -1,23 +1,42 @@
-const threeCards = document.getElementById('threeCards');
-const sixCards = document.getElementById('sixCards');
-const nineCards = document.getElementById('nineCards');
-const startButton = document.getElementById('startBtn');
-const menuDifficulty = document.getElementById('navMenu');
-const gameMode = document.getElementById('gameMode');
+const lvls = document.querySelectorAll('.nav__link');
+const startButton = document.querySelector('.button_start');
 
 
-threeCards.addEventListener('click', () => {
-    threeCards.classList.add('selected');
-    sixCards.classList.remove('selected');
-    nineCards.classList.remove('selected');
+lvls.forEach(el => {
+    el.addEventListener('click', () => {
+        lvls.forEach(el => el.classList.remove('selected'));
+        el.classList.add('selected');
+    });
 });
-sixCards.addEventListener('click', () => {
-    sixCards.classList.add('selected');
-    threeCards.classList.remove('selected');
-    nineCards.classList.remove('selected');
+
+function addNumber() {
+    const value = document.querySelector('.selected').innerHTML;
+    switch (value) {
+        case 'Простой':
+            return 3;
+            break;
+        case 'Средний':
+            return 6;
+            break;
+        case 'Сложный':
+            return 9;
+            break;
+    }
+};
+
+function numbCards(card) {
+    let div = document.createElement('div');
+    div.className = card;
+    return div;
+}
+
+startButton.addEventListener('click', () => {
+    document.querySelector('.header').style.display = 'none';
+    document.querySelector('.section').style.display = 'none';
+    for (let i = 0; i < addNumber(); i++) {
+        document.body.appendChild(numbCards('card'));
+    }
 });
-nineCards.addEventListener('click', () => {
-    nineCards.classList.add('selected');
-    threeCards.classList.remove('selected');
-    sixCards.classList.remove('selected');
-});
+
+
+

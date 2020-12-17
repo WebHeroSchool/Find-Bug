@@ -11,8 +11,26 @@ body {
     position: relative;
 }
 
-.offMode {
-    display: none;
+/* .offMode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+} */
+
+.gameMode {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selected::before {
+    position: absolute;
+    content: url('../img/checkmark.svg');
+    width: 18px;
+    height: 18px;
+    left: 143px;
 }
 
 .main {
@@ -70,11 +88,11 @@ body {
 
 .nav__link:hover::before {
     position: absolute;
-    content: url('../img/checkmark.svg');
+    content: '' url('../img/checkmark.svg');
     width: 18px;
     height: 18px;
     left: 143px;
-    opacity: .8;
+    opacity: .6;
 }
 
 .nav__link:nth-last-child(2) {
@@ -120,17 +138,17 @@ body {
     grid-column: 2 / 4;
 }
 
-.gameMode {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/* .card {
+    width: 222px;
+    height: 345px;
+} */
 
-/* test js */
-
-.selected {
+.card::after {
     display: block;
+    position: relative;
+    content: '' url('../img/card.png');
+    margin: auto;
+    cursor: pointer;
 }
 
 @media (max-width: 1024px) {
@@ -140,12 +158,12 @@ body {
     .header {
         margin-left: 43px;
     }
-    .section {
+    /* .section {
         margin-left: 43px;
-    }
-    .nav__link:hover::before {
+    } */
+    /* .nav__link:hover::before {
         left: 43px;
-    }
+    } */
     .decoration {
         margin-left: 0;
     }
@@ -185,9 +203,9 @@ body {
     .nav__link:nth-last-child(2) {
         margin-bottom: 70px;
     }
-    .nav__link:hover::before {
+    /* .nav__link:hover::before {
         left: 143px;
-    }
+    } */
     .button_start {
         font-size: 28px;
         line-height: 30px;
