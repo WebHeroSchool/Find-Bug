@@ -18,7 +18,7 @@ body {
     flex-direction: row;
 } */
 
-.gameMode {
+.game {
     height: 100%;
     display: flex;
     align-items: center;
@@ -138,16 +138,14 @@ body {
     grid-column: 2 / 4;
 }
 
-/* .card {
-    width: 222px;
-    height: 345px;
-} */
+.card {
+    display: inline-block;
+}
 
 .card::after {
-    display: block;
+    display: inline-block;
     position: relative;
     content: '' url('../img/card.png');
-    margin: auto;
     cursor: pointer;
 }
 
@@ -158,12 +156,6 @@ body {
     .header {
         margin-left: 43px;
     }
-    /* .section {
-        margin-left: 43px;
-    } */
-    /* .nav__link:hover::before {
-        left: 43px;
-    } */
     .decoration {
         margin-left: 0;
     }
@@ -203,9 +195,6 @@ body {
     .nav__link:nth-last-child(2) {
         margin-bottom: 70px;
     }
-    /* .nav__link:hover::before {
-        left: 143px;
-    } */
     .button_start {
         font-size: 28px;
         line-height: 30px;

@@ -34,7 +34,7 @@ startButton.addEventListener('click', () => {
     document.querySelector('.header').style.display = 'none';
     document.querySelector('.section').style.display = 'none';
     for (let i = 0; i < addNumber(); i++) {
-        document.body.appendChild(numbCards('card'));
+        document.querySelector('.game').appendChild(numbCards('card'));
     }
 });
 
