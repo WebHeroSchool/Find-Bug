@@ -1,5 +1,8 @@
 const lvls = document.querySelectorAll('.nav__link');
 const startButton = document.querySelector('.button_start');
+const navLink = document.querySelectorAll('nav');
+navLink[0].firstElementChild.classList.add('selected');
+let mainDesk = document.querySelector('.main');
 
 
 lvls.forEach(el => {
@@ -8,6 +11,7 @@ lvls.forEach(el => {
         el.classList.add('selected');
     });
 });
+
 
 function addNumber() {
     const value = document.querySelector('.selected').innerHTML;
@@ -36,6 +40,9 @@ startButton.addEventListener('click', () => {
     for (let i = 0; i < addNumber(); i++) {
         document.querySelector('.main').style.display = 'flex';
         document.querySelector('.game').appendChild(numbCards('card'));
+        if (i > 6) {
+            document.querySelector('.main').style.height = 100 + '%';
+        }
     }
 });
 
