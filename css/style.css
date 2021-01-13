@@ -79,10 +79,6 @@ body {
     cursor: pointer;
 }
 
-.nav__link:hover::before {
-    opacity: .9;
-}
-
 .nav__link:nth-last-child(2) {
     margin-bottom: 112px;
 }
