@@ -30,6 +30,7 @@ body {
     position: relative;
     background-image: url('../img/background.png');
     background-size: auto;
+    min-height: 1024px;
     height: 100vh;
 }
 
