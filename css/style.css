@@ -78,16 +78,9 @@ body {
     margin-left: 42px;
     cursor: pointer;
 }
-.nav__link:hover {
-    opacity: .9;
-}
 
 .nav__link:hover::before {
-    position: absolute;
-    content: '' url('../img/checkmark.svg');
-    width: 18px;
-    height: 18px;
-    left: 143px;
+    opacity: .9;
 }
 
 .nav__link:nth-last-child(2) {
