@@ -3,6 +3,9 @@ const startButton = document.querySelector('.button_start');
 const navLink = document.querySelectorAll('nav');
 navLink[0].firstElementChild.classList.add('selected');
 let mainDesk = document.querySelector('.main');
+let card = document.getElementsByClassName('card');
+
+
 
 
 lvls.forEach(el => {
@@ -32,7 +35,12 @@ function numbCards(card) {
     let div = document.createElement('div');
     div.className = card;
     return div;
-}
+};
+
+
+
+card.addEventListener("click", () => card.style.transform = 'rotate(180deg)');
+
 
 startButton.addEventListener('click', () => {
     document.querySelector('.header').style.display = 'none';
@@ -46,5 +54,6 @@ startButton.addEventListener('click', () => {
     }
 });
 
-
-
+// for (let i = 0; i < value.length; i++) {
+//     value[i].addEventListener('click', addNumber(), false);
+// }
