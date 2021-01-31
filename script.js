@@ -3,9 +3,6 @@ const startButton = document.querySelector('.button_start');
 const navLink = document.querySelectorAll('nav');
 navLink[0].firstElementChild.classList.add('selected');
 let mainDesk = document.querySelector('.main');
-let card = document.getElementsByClassName('card');
-
-
 
 
 lvls.forEach(el => {
@@ -14,7 +11,6 @@ lvls.forEach(el => {
         el.classList.add('selected');
     });
 });
-
 
 function addNumber() {
     const value = document.querySelector('.selected').innerHTML;
@@ -37,10 +33,16 @@ function numbCards(card) {
     return div;
 };
 
-
-
-card.addEventListener("click", () => card.style.transform = 'rotate(180deg)');
-
+function reNewGame(card) {
+    card.forEach(el => {
+        el.addEventListener('click', () => {
+            document.querySelector('.header').style.display = 'block';
+            document.querySelector('.section').style.display = 'flex';
+            document.querySelector('.game').innerHTML = '';
+            document.querySelector('.main').style.display = 'block';
+        })
+    })
+}
 
 startButton.addEventListener('click', () => {
     document.querySelector('.header').style.display = 'none';
@@ -52,8 +54,22 @@ startButton.addEventListener('click', () => {
             document.querySelector('.main').style.height = 100 + '%';
         }
     }
-});
 
-// for (let i = 0; i < value.length; i++) {
-//     value[i].addEventListener('click', addNumber(), false);
-// }
+    let card = document.querySelectorAll('.card');
+    card.forEach(el => {
+        el.appendChild(numbCards('front'));
+        el.appendChild(numbCards('back'));
+        el.addEventListener('click', () => {
+            let number = Math.round(Math.random());
+            el.style.transform = 'rotateY(180deg)';
+            el.querySelector('.back').transform = 'rotateY(180deg)';
+            if (number === 0) {
+                el.querySelector('.back').classList.add('back-lose');
+            } else {
+                el.querySelector('.back').classList.add('back-win');
+            }
+            reNewGame(card);
+        })
+
+    });
+});
