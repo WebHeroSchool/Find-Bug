@@ -1,0 +1,233 @@
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    position: relative;
+}
+
+.selected::before {
+    position: absolute;
+    content: url('../img/checkmark.svg');
+    width: 18px;
+    height: 18px;
+    left: 143px;
+}
+
+.main {
+    position: relative;
+    background-image: url('../img/background.png');
+    background-size: auto;
+    min-height: 1024px;
+    height: 100vh;
+}
+
+.header {
+    font-family: 'roboto-super' sans-serif;
+    color: #fff;
+    margin-left: 143px;
+    padding-top: 123px;
+}
+
+.header__title {
+    font-weight: 700;
+    width: 833px;
+    height: 67px;
+    font-size: 57px;
+    line-height: 67px;
+    margin-bottom: 8px;
+}
+
+.header__text {
+    font-weight: 400;
+    width: 828px;
+    height: 23px;
+    font-size: 19px;
+    line-height: 22px;
+    margin-bottom: 60px;
+}
+
+.section {
+    display: flex;
+    margin-left: 143px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__link {
+    color: #fff;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 59px;
+    margin-bottom: 24px;
+    margin-left: 42px;
+    cursor: pointer;
+}
+
+.nav__link:nth-last-child(2) {
+    margin-bottom: 112px;
+}
+
+.button_start {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 352px;
+    height: 95px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37px;
+    background-color: #D62B2E;
+    color: #fff;
+    border-radius: 7px;
+    border: none;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.button_start:hover {
+    font-size: 33px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.decoration {
+    display: grid;
+    grid-auto-rows: 100px;
+    grid-auto-columns: 100px;
+    margin-left: 401px;
+}
+
+.card1 {
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+}
+
+.card2 {
+    grid-row: 3 / 4;
+    grid-column: 2 / 4;
+}
+
+.game {
+    margin: auto;
+    display: block;
+    min-width: 501px;
+    max-width: 749px;
+}
+
+.card {
+    width: 225px;
+    height: 349px;
+    position: relative;
+    display: inline-block;
+    margin: auto;
+    margin-left: 24px;
+    margin-bottom: 24px;
+}
+
+.card:hover {
+    filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5));
+    transform: rotate(-3.08deg);
+    transition: all 0.2s ease-in-out;
+}
+
+.front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 100% 100% no-repeat url('../img/card.png');
+    background-size: cover;
+    backface-visibility: hidden;
+}
+
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+}
+
+.back-win {
+    background-image: url('../img/bug_card.jpg');
+    background-size: cover;
+    border-radius: 9px;
+}
+
+.back-lose {
+    background-image: url('../img/noBug_card.svg');
+    background-size: cover;
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+@media (max-width: 1024px) {
+    .main {
+        width: auto;
+    }
+    .header {
+        margin-left: 43px;
+    }
+    .decoration {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .main {
+        margin: auto;
+        width: auto;
+    }
+    .header {
+        display: block;
+        width: 600px;
+        margin-left: 0;
+        padding-top: 0;
+    }
+    .header__title {
+        height: 58px;
+        font-size: 40px;
+    }
+    .header__text {
+        width: 600px;
+        height: 46px;
+    }
+    .section {
+        flex-direction: column;
+        margin-left: 25px;
+    }
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
+    .nav__link {
+        margin-left: 0;
+    }
+    .nav__link:nth-last-child(2) {
+        margin-bottom: 70px;
+    }
+    .button_start {
+        font-size: 28px;
+        line-height: 30px;
+        width: 230px;
+        height: 50px;
+    }
+    .decoration {
+        margin-left: 0;
+        grid-auto-rows: 25px;
+    }
+}
